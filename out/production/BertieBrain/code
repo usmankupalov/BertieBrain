@@ -1,0 +1,9 @@
+ Iterator<T> elementsIterator = this.iterator();
+        Consumer<T> action = element -> {
+            if (!c.contains(element)) {
+                elementsIterator.remove();
+            }
+        };
+        elementsIterator.forEachRemaining(action);
+        return true;
+
